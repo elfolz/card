@@ -1,3 +1,11 @@
+if (location.protocol.startsWith('https')) {
+	navigator.serviceWorker.register('service-worker.js')
+	navigator.serviceWorker.onmessage = m => {
+		console.info('Update found!')
+		if (m?.data == 'update') location.reload(true)
+	}
+}
+
 const reader = new FileReader()
 var inputError = false
 var textareaError = false
