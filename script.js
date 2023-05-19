@@ -33,7 +33,7 @@ document.onreadystatechange = () => {
 		reader.readAsDataURL(e.target.files[0])
 	}
 	document.querySelector('select').onchange = e => {
-		document.querySelector('#bg').src = `/img/${e.target.value}.webp`
+		document.querySelector('#bg').src = `./img/${e.target.value}.webp`
 		if (['trap', 'spell'].includes(e.target.value)) document.querySelector('header').style.display = 'none'
 		else  document.querySelector('header').style.removeProperty('display')
 	}
