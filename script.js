@@ -11,15 +11,15 @@ var inputError = false
 var textareaError = false
 
 function refreshPageSize() {
-	const ratioW = window.visualViewport.width / 421
-	const ratioH = window.visualViewport.height / 614
+	const ratioW = window.width / 421
+	const ratioH = window.height / 614
 	var ratio = Math.min(ratioW, ratioH)
 	if (ratio > 1) ratio = 1
 	const cardW = document.querySelector('#bg').clientWidth
-	document.querySelector('input[type=text]').style.left = `${25 * ratio}px`
+	document.querySelector('input[type=text]').style.left = `${22 * ratio}px`
 	document.querySelector('input[type=text]').style.top = `${28 * ratio}px`
 	document.querySelector('input[type=text]').style.width = `${cardW - (50 * ratio)}px`
-	document.querySelector('input[type=text]').style.height = `${37 * ratio}px`
+	document.querySelector('input[type=text]').style.height = `${48 * ratio}px`
 	document.querySelector('input[type=text]').style.fontSize = `${2 * ratio}em`
 	document.querySelector('textarea').style.left = `${28 * ratio}px`
 	document.querySelector('textarea').style.top = `${463 * ratio}px`
@@ -66,7 +66,5 @@ document.onreadystatechange = () => {
 }
 
 window.onresize = () => refreshPageSize()
-window.visualViewport.onresize = () => refreshPageSize()
-window.visualViewport.onscroll = () => refreshPageSize()
 
 refreshPageSize()

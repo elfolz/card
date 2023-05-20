@@ -46,21 +46,21 @@ main label {
 }
 input[type=text], textarea {
 	position: absolute;
-	border: none;
 	background: none;
 	resize: none;
 	border: none;
 	overflow: hidden;
 }
 input[type=text] {
-	top: 28px;
+	top: 22px;
 	left: 25px;
 	width: calc(100% - 50px);
-	height: 37px;
+	height: 48px;
 	font-size: 2em;
 	font-weight: bold;
 	transition: background-color 250ms ease-in-out;
 	text-transform: capitalize;
+	line-height: 0;
 }
 input[type=file] {
 	display: none;
