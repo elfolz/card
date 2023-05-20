@@ -1,6 +1,6 @@
 @font-face {
 	font-family: "Yu-Gi-Oh! Matrix Book", serif;
-	src: url("./font.woff2");
+	src: url("./font.woff2")  format('woff2');
 }
 * {
 	font-family: "Yu-Gi-Oh! Matrix Book", serif;
@@ -55,7 +55,7 @@ input[type=text] {
 	top: 22px;
 	left: 25px;
 	width: calc(100% - 50px);
-	height: 48px;
+	height: 42px;
 	font-size: 2em;
 	font-weight: bold;
 	transition: background-color 250ms ease-in-out;
@@ -72,6 +72,7 @@ textarea {
 	height: 96px;
 	font-size: 1.5em;
 	border-radius: 6px;
+	white-space: nowrap;
 	transition: background-color 250ms ease-in-out;
 }
 .error {
@@ -89,9 +90,12 @@ button {
 	margin-left: 12px;
 }
 footer {
-		display: flex;
-		justify-content: space-between;
-	}
+	display: flex;
+	justify-content: space-between;
+}
+canvas {
+	display: none;
+}
 #photo {
 	position: absolute;
 	top: 110px;
